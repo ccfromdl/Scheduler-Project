@@ -1,0 +1,4 @@
+1. 增删改查Schedule
+2. 批量增删改查Schedules
+3. Post，Update时校验Schedule不冲突，若冲突则返回消息提示
+4. 
