@@ -1,24 +1,20 @@
 package com.jp.springboot.controller;
 
-import com.jp.springboot.model.Schedule;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import javax.persistence.EntityManagerFactory;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.jp.springboot.model.Schedule;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
 @RequestMapping("/api/v1")
 public class ScheduleController {
-    private Map<Long, Schedule> scheduleMap = new HashMap<>();
+    private final Map<Long, Schedule> scheduleMap = new HashMap<>();
 
 //    @PostMapping("/schedules")
 //    public Schedule createSchedule(@RequestBody Schedule schedule) {
